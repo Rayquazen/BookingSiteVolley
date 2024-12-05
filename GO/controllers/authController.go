@@ -381,3 +381,38 @@ func DoneBookings(c *fiber.Ctx) error {
 		"bookings": bookings,
 	})
 }
+
+// Получение данных текущего пользователя
+func GetUserData(c *fiber.Ctx) error {
+	// Читаем токен из cookie
+	cookie := c.Cookies("jwt")
+	token, err := jwt.ParseWithClaims(cookie, &jwt.RegisteredClaims{}, func(token *jwt.Token) (interface{}, error) {
+		return []byte(SecretKey), nil
+	})
+
+	if err != nil || !token.Valid {
+		return c.Status(fiber.StatusUnauthorized).JSON(fiber.Map{
+			"message": "Unauthorized",
+		})
+	}
+
+	// Получаем данные из claims
+	claims, _ := token.Claims.(*jwt.RegisteredClaims)
+	var user models.User
+
+	// Находим пользователя в базе данных
+	database.DB.Where("id = ?", claims.Issuer).First(&user)
+
+	if user.Id == 0 {
+		return c.Status(fiber.StatusNotFound).JSON(fiber.Map{
+			"message": "User not found",
+		})
+	}
+
+	// Формируем ответ
+	return c.JSON(fiber.Map{
+		"name":         user.Name,
+		"phone_number": user.PhoneNumber,
+		// "payment_method": "0012", // Если поле payment_method не задано, добавьте его в модели/базу
+	})
+}

@@ -19,5 +19,6 @@ func Setup(app *fiber.App) {
 	app.Get("/api/active_bookings", controllers.GetActiveBookings)
 	app.Delete("/api/delete_bookings/:id", controllers.DeleteBookings)
 	app.Get("/api/done_bookings", controllers.DoneBookings)
+	app.Get("/api/userData", controllers.GetUserData)
 
 }
