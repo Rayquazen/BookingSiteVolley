@@ -106,17 +106,7 @@ func User(c *fiber.Ctx) error {
 
 	database.DB.Where("id =?", claims.Issuer).First(&user)
 
-	if user.Id == 0 {
-		return c.Status(fiber.StatusNotFound).JSON(fiber.Map{
-			"message": "User not found",
-		})
-	}
-
-	return c.JSON(fiber.Map{
-		"name": user.Name,
-
-		"phone_number": user.PhoneNumber,
-	})
+	return c.JSON(user)
 }
 
 func Logout(c *fiber.Ctx) error {

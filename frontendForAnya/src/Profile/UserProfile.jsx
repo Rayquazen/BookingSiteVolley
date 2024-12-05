@@ -3,10 +3,8 @@ import styles from "./UserProfile.module.css";
 import UserInfo from "./UserInfo";
 import BookingsList from "./BookingList";
 
-export default function ProfilePage({ setName }) {
-	const [selectedComponent, setSelectedComponent] = useState(
-		<UserInfo setName={setName} />
-	); // Состояние для компонента
+export default function ProfilePage() {
+	const [selectedComponent, setSelectedComponent] = useState(<UserInfo />); // Состояние для компонента
 
 	return (
 		<main className={styles.container}>
