@@ -36,7 +36,7 @@ function App() {
 					<Route path="/booking" element={<CourtBookingCalendar />} />
 					<Route path="/login" element={<Login setName={setName} />} />
 					<Route path="/register" element={<Register />} />
-					<Route path="/userinfo" element={<UserProfile setName={setName} />} />
+					<Route path="/userinfo" element={<UserProfile />} />
 				</Routes>
 			</Router>
 		</>

@@ -1,46 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./UserProfile.module.css";
 
-export default function UserInfo({ setName }) {
-	const [userDetails, setUserDetails] = useState({
-		name: "",
-		instagram: "Не указано",
-		phone: "Не указано",
-		paymentMethod: "Не указано",
-	});
-
-	useEffect(() => {
-		(async () => {
-			try {
-				const host = import.meta.env.VITE_APP_HOST
-					? import.meta.env.VITE_APP_HOST
-					: "";
-				const response = await fetch(`${host}/api/user`, {
-					headers: {
-						"Content-Type": "application/json",
-					},
-					credentials: "include",
-				});
-
-				if (!response.ok) {
-					throw new Error("Ошибка получения данных пользователя");
-				}
-
-				const data = await response.json();
-
-				setName(data.name);
-
-				setUserDetails({
-					name: data.name,
-					instagram: data.instagram || "Не указано", // Добавьте поле, если нужно
-					phone: data.phone_number || "Не указано",
-					paymentMethod: data.payment_method || "Не указано",
-				});
-			} catch (error) {
-				console.error("Ошибка:", error);
-			}
-		})();
-	}, []);
+export default function UserInfo() {
+	const userDetails = {
+		name: "Иванов Иван Иванович",
+		instagram: "ivanov6745",
+		phone: "8-800-555-35-35",
+		paymentMethod: "0012",
+	};
 
 	return (
 		<div className={styles.userInfoColumn}>
