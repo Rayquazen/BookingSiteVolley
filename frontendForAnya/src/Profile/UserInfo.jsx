@@ -4,35 +4,40 @@ import styles from "./UserProfile.module.css";
 export default function UserInfo() {
 	const [userDetails, setUserDetails] = useState({
 		name: "",
-		instagram: "",
-		phone: "",
-		paymentMethod: "",
+		instagram: "Не указано",
+		phone: "Не указано",
+		paymentMethod: "Не указано",
 	});
 
 	useEffect(() => {
-		// Запрос данных с бэкенда
-		fetch("/api/user", {
-			method: "GET",
-			credentials: "include", // Чтобы отправить cookie
-		})
-			.then((response) => {
+		(async () => {
+			try {
+				const host = import.meta.env.VITE_APP_HOST
+					? import.meta.env.VITE_APP_HOST
+					: "";
+				const response = await fetch(`${host}/api/user`, {
+					headers: {
+						"Content-Type": "application/json",
+					},
+					credentials: "include",
+				});
+
 				if (!response.ok) {
 					throw new Error("Ошибка получения данных пользователя");
 				}
-				return response.json();
-			})
-			.then((data) => {
-				// Преобразуем данные в нужный формат
+
+				const data = await response.json();
+
 				setUserDetails({
 					name: data.name,
-					// instagram: data.instagram || "Не указано",
+					instagram: data.instagram || "Не указано", // Добавьте поле, если нужно
 					phone: data.phone_number || "Не указано",
 					paymentMethod: data.payment_method || "Не указано",
 				});
-			})
-			.catch((error) => {
+			} catch (error) {
 				console.error("Ошибка:", error);
-			});
+			}
+		})();
 	}, []);
 
 	return (
