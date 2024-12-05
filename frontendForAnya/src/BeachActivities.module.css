@@ -1,0 +1,152 @@
+.container {
+  background-color: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 43px 77px 46px;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 2vw; /* Для очень узких экранов уменьшаем отступы */
+  }
+}
+
+.title {
+  color: #ffb100;
+  letter-spacing: 2.25px;
+  text-align: center;
+  align-self: center;
+  font: 3.3em Oswald, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .title {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5em; /* Уменьшаем заголовок для телефонов */
+  }
+}
+
+.activitiesContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3vh;
+  
+}
+
+@media (max-width: 991px) {
+  .activitiesContainer {
+    margin-top: 2vh;
+  }
+}
+
+.activitiesGrid {
+  gap: 1vh;
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  .activitiesGrid {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.activityCard {
+  border-radius: 15px;
+  background-color: transparent;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  padding-right:1vw;
+  font: 1.2em Lohit Bengali, -apple-system, Roboto, Helvetica, sans-serif;
+  border: 5px solid #ffb100;
+  
+}
+
+@media (max-width: 991px) {
+  .activityCard {
+    padding: 2vw; /* Уменьшаем внутренние отступы */
+    margin-top: 2vh;
+
+  }
+}
+
+@media (max-width: 480px) {
+  .activityCard {
+    padding: 15px;
+    font-size: 1em; /* Сужаем текст */
+    align-items: center;
+    flex-direction: row;
+    
+  }
+}
+
+.activityTitle {
+  align-self: center;
+  text-align: center;
+  width: 15vw;
+  margin-top: 2vh;
+}
+
+@media (max-width: 480px) {
+  .activityTitle {
+    width: 100%;
+  }
+}
+
+.activityImage {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  margin-top: 3vh;
+}
+
+@media (max-width: 991px) {
+  .activityImage {
+    margin-top: 2vh;
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .activityImage {
+    margin-top: 1vh;
+  }
+}
+
+.description {
+  color: #fff;
+  text-align: center;
+  margin-top: 5vh;
+  font: 400 1.5em Lohit Bengali, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .description {
+    font-size: 1.2em;
+    margin: 2vw 1vh 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .description {
+    font-size: 16px; /* Уменьшаем размер шрифта */
+    line-height: 30px; /* Подгоняем межстрочный интервал */
+  }
+}

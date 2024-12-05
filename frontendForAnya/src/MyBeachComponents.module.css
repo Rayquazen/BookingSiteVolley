@@ -1,0 +1,281 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%; /* Устанавливаем высоту на 100% */
+  min-height: 100vh;
+  background-color: #1f1f1f;
+}
+
+header {
+  overflow: hidden;
+  position: absolute;
+  
+}
+/*вся страница*/
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  justify-content: flex-start;
+}
+
+.mainContent {
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+}
+/*лого и навигация*/
+.header {
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  position: absolute;
+  overflow: hidden !important;
+  color: #fff;
+  white-space: nowrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  white-space: nowrap;
+  
+}
+
+@media (max-width: 991px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    white-space: initial;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 20px;
+  }
+}
+.backpic {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../public/mainphoto.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.logo {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 6vw;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  .logo {
+    display: none;
+  }
+}
+
+.navigation {
+  display: flex;
+  text-align: right;
+  top: 0;
+  gap: 3vh;
+  right: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  .navigation {
+    justify-content: center;
+    gap: 2vh;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    gap: 2vh;
+    font-size: 18px;
+  }
+}
+
+.navItem {
+  color: white;
+  font-family: Lohit Bengali;
+  font-size: 1.7em; 
+  margin: 2vw;
+  top: 5vh;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  .navItem {
+    font-size: 1.3em;
+    margin: 1vw;
+  }
+}
+
+.navItem:hover{
+  color: rgba(255, 177, 0, 1);
+}
+
+
+/*контейнер с майбич кнопка и комплекс*/
+.hero {
+  display: flex;
+  max-width: 100%;
+  padding-left: 5em;
+  width: 80%;
+}
+
+@media (max-width: 991px) {
+  .hero {
+    padding-left: 2em;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-left: 1em;
+    text-align: center;
+  }
+}
+/*надпись майбич*/
+.heroTitle {
+  text-shadow: 10px 10px 4px rgba(0, 0, 0, 0.58);
+  color: rgba(255, 177, 0, 1);
+  position: absolute;
+  left: 5%;
+  top: -10vh;
+  font-family: Paytone One;
+  font-size: 12em; /* Используем vw для адаптивного размера шрифта */
+  letter-spacing: 0.05em; 
+}
+
+@media (max-width: 1100px) {
+  .heroTitle {
+    font-size: 8em;
+    letter-spacing: 4px;
+    margin-top: 19vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 4em;
+    letter-spacing: 2px;
+  }
+}
+/*комплекс*/
+.heroSubtitle {
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  left: 5%;
+  top: 30vh; /* Относительная высота */
+  font-family: Oswald;
+  font-size: 5em; 
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 991px) {
+  .heroSubtitle {
+    font-size: 3em;
+    top: 45vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSubtitle {
+    font-size: 2em;
+  }
+}
+/*кнопка забронить*/
+.ctaButton {
+  background-color: rgba(255, 177, 0, 0.8);
+  width: 29%; /* Относительная ширина */
+  height: 10%; /* Используем относительную высоту */
+  position: absolute;
+  color: rgba(0, 0, 0);
+  left: 5%;
+  top: 80vh; /* Относительная высота отступ */
+  font-family: Lohit Bengali;
+  font-size: 2.2em; /* Используем vw для адаптивного размера шрифта */
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.05em; /* Адаптивный интервал */
+  border-radius: 35px; /* Упрощение границ */
+  text-decoration: none;
+  border: 0;
+}
+
+.ctaButton:hover{
+  background-color: rgba(255, 177, 0, 1);
+}
+
+@media (max-width: 991px) {
+  .ctaButton {
+    width:50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ctaButton {
+    width: 50%;
+    font-size: 2em;
+  }
+}
+
+/*адрес*/
+.footer {
+  background-color: rgba(127, 127, 128, 0);
+  bottom: 2vh;
+  right: 5vw;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  .footer {
+    padding-right: 1vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1vw;
+  }
+}
+/*адрес надпись*/
+.address {
+  color: #fff;
+  text-align: right;
+  letter-spacing: 0.25px;
+  font: 1.5em Lohit Bengali, sans-serif;
+}
+@media (max-width: 991px) {
+  .address {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 480px) {
+  .address {
+    font-size: 1em;
+  }
+}
+@font-face {
+  font-family: Oswald;
+  src: url("../public/Oswald/Oswald-Medium.ttf");
+}
+@font-face {
+  font-family: 'Lohit Bengali';
+  src: url("../public/Roboto/Roboto-Light.ttf");
+}

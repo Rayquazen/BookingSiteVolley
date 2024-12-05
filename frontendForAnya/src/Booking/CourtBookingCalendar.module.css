@@ -1,0 +1,230 @@
+.calendar {
+  font-family: "Oswald", sans-serif;
+  background-color: #1f1f1f;
+  color: #fff;
+  text-align: center;
+  padding: 5vh;
+}
+
+.courtTypes {
+  font-size: 2em;
+  margin-top: 4vh;
+}
+
+.highlight {
+  color: #ffb100;
+}
+
+.dateSelector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap:3vw;
+}
+
+.dateDisplayButton {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: white;
+}
+
+.dateDisplay {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dateDisplayButton:hover {
+  text-decoration: underline;
+  color: #ffb100;
+  cursor: pointer;
+}
+
+.dateButton {
+  background: none;
+  border: 2px solid #2d8aff;
+  border-radius: 50%;
+  color: #2d8aff;
+  width: 3vw;
+  height: 3vw;
+  font-size: 1.5vw;
+  cursor: pointer;
+}
+
+.bookingTable {
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+  padding: 3vh;
+  border-radius: 15px;
+  max-width: 90%;
+  margin: auto;
+}
+
+.courtRow {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.courtLabel {
+  font-size: 2vw;
+  color: #fff;
+  width: 8.5vw;
+  text-align: right;
+  margin-right: 3vw;
+}
+
+.timeRow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1vw;
+  width: 70%;
+}
+
+.timeSlot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2vw;
+  border-radius: 8px;
+  padding: 1vh 2vw;
+  color: #000;
+  cursor: pointer;
+}
+
+.booked{
+  background-color: #535353!important;
+}
+
+.morning {
+  background-color: #ffb100; /* Светло-желтый */
+}
+
+.afternoon {
+  background-color: #ffffff; /* Белый */
+}
+
+.evening {
+  background-color: #2d8aff; /* Голубой */
+}
+
+
+.legend {
+  display: flex;
+  font-size: 1.2vw;
+  justify-content: center;
+  margin-top: -1vh;
+  gap: 5vw;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.legendIcon {
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+}
+
+.dateInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Скрываем поле */
+  pointer-events: none; /* Поле не кликабельно */
+}
+.calendarIcon {
+  font-size: 1rem; /* Размер иконки */
+  display: inline-block;
+  padding-left: 5px;
+}
+
+.courtButton {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 2vw;
+  cursor: pointer;
+  padding: 1vw;
+}
+
+
+.selected {
+  font-weight: bold;
+  color: #ffb100; /* Цвет для выделенной кнопки */
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .timeRow {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .timeRow {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw;
+  }
+
+
+  .dateButton {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+
+
+  .courtLabel {
+    font-size: 18px;
+    width: 70px;
+  }
+
+  .dateInput {
+    width: 150px;
+    font-size: 14px;
+  }
+}
+
+.booked {
+  background-color: gray;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .timeRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timeSlot {
+    font-size: 1.5vw;
+    padding: 1vh 2vw;
+  }
+
+  .courtLabel {
+    font-size: 16px;
+    width: 60px;
+  }
+
+
+  .dateButton {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .dateInput {
+    width: 120px;
+    font-size: 12px;
+  }
+}

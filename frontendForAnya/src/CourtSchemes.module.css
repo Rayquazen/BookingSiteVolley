@@ -1,0 +1,136 @@
+
+
+.container {
+  background-color: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  }
+  
+  @media (max-width: 991px) {
+    .container {
+      padding: 0 5vh;
+    }
+  }
+  
+  .title {
+    color: #ffb100;
+    letter-spacing: 2.25px;
+    text-align: center;
+    font: 3.3em Oswald, sans-serif;
+    margin-top: 3vh;
+  }
+  
+  @media (max-width: 991px) {
+    .title {
+      max-width: 100%;
+      font-size: 2em;
+    }
+  }
+  
+  .courtContainer {
+    align-self: stretch;
+    margin-top: 2 vh;
+  }
+  
+  @media (max-width: 991px) {
+    .courtContainer {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  
+  .courtGrid {
+    display: flex;
+    gap: 3vw;
+  }
+  
+  @media (max-width: 991px) {
+    .courtGrid {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  }
+  
+  .courtColumn {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 33%;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  
+  @media (max-width: 991px) {
+    .courtColumn {
+      width: 100%;
+    }
+  }
+  
+  .courtWrapper {
+    background-color: transparent;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1.5px;
+    width: 100%;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    font: 1.3em Oswald, sans-serif;
+  }
+  
+  @media (max-width: 991px) {
+    .courtWrapper {
+      margin-top: 1vh;
+    }
+  }
+  
+  .courtTitle {
+    align-self: center;
+  }
+  
+  .courtImage {
+    aspect-ratio: 0.78;
+    object-fit: contain;
+    object-position: center;
+    width: 80%;
+    margin-top:3vh;
+  }
+
+  @media (max-width: 991px) {
+    .courtImage {
+      width:30vw ;
+    }
+  }
+  
+  .description {
+    color: #fff;
+    text-align: center;
+    font: 1.5em 'Lohit Bengali', -apple-system, Roboto, Helvetica, sans-serif;
+    float: right;
+    text-align: center;
+  }
+  
+  @media (max-width: 991px) {
+    .description {
+      max-width: 100%;
+      font-size: 1em;
+    }
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }

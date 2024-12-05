@@ -1,0 +1,246 @@
+.container {
+    background: rgba(31, 31, 31, 1);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    overflow: hidden;
+    min-height: 90vh;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-between; /* Разделяет колонки */
+    align-items: flex-start; /* Убирает вертикальное центрирование */
+    margin-top: 15vh;
+    width: 100%; /* Занимает всю ширину */
+  }
+  
+  .sectionTitle {
+    margin-top: 7vh;
+    margin-left: 3vw;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing:4%;
+    align-self: start;
+    font: 400 2em 'Lohit Bengali', -apple-system, Roboto, Helvetica, sans-serif;
+  }
+
+  /* .sectionTitle:hover{
+    color:rgba(255, 177, 0, 1);
+  } */
+  
+  
+  .twoColumn {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between; /* Отправляет колонки в стороны */
+    align-items: flex-start; /* Убирает вертикальное центрирование */
+  }
+  
+  /* .bookingsColumn {
+    flex: 0 0 25%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    text-decoration: none;
+   }
+  
+  .bookingsList {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    margin: auto 0;
+  }
+  
+  .activeBookings {
+    align-self: start;
+    margin-top: 0;
+  } */
+  
+  .bookingsColumn {
+    flex: 0 0 20%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 2vw;
+  }
+  
+  .bookingsList {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    color: #fff;
+    letter-spacing: 1.75px;
+    margin: 0;
+    font: 400 2em 'Lohit Bengali', -apple-system, Roboto, Helvetica, sans-serif;
+    gap: 10vh;
+  }
+  
+  .activeBookings {
+    align-self: start;
+    /* margin-top: 7vh; */
+    /* margin: 5vh; */
+  }
+  
+  .bookingsList a:hover{
+    color: rgba(255, 177, 0, 1);
+  }
+
+  .bookingsList a{
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .activeLink {
+    color: rgba(255, 177, 0, 1) !important; /* Цвет активной ссылки */
+    font-weight: bold; /* Дополнительно выделяем */
+    text-decoration: underline; /* Подчеркивание */
+  }
+  
+  
+  
+  .userInfo {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    letter-spacing: 2%;
+    font: 2em 'Lohit Bengali', -apple-system, Roboto, Helvetica, sans-serif;
+    margin-top: 10vh;
+    margin-left: 8vw;
+  }
+  
+  .userDetails {
+    color: #fff;
+    font-weight: 300;
+  }
+  
+  .editButton {
+    border-radius: 35px;
+    background: rgba(217, 217, 217, 1);
+    margin-top: 5vh;
+    max-width: 100%;
+    color:  rgba(31, 31, 31, 1);
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;
+    padding: 1.5vh;
+    border: none;
+    cursor: pointer;
+    font-family: 'Lohit Bengali', -apple-system, Roboto, Helvetica, sans-serif;
+    letter-spacing: 10%;
+  }
+  .editButton:hover{
+    background-color: rgba(255, 177, 0, 1);
+  }
+  .selectedComponentWrapper {
+    flex: 1; /* Компонент занимает оставшееся место */
+    display: flex;
+    justify-content: center; /* Центруем {selectedComponent} по горизонтали */
+    align-items: center; /* Центруем {selectedComponent} по вертикали внутри своей области */
+   
+  }
+
+  .bookingsGridDone {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3vh;
+    /* font-family: 'Lohit Bengali', -apple-system, Roboto, Helvetica, sans-serif; */
+  }
+  .bookingsGridDescriptionsDone {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5vw;
+  }
+
+  .bookingsGridActiv {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3vh;
+  }
+  .bookingsGridDescriptions {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2vw;
+  }
+  .bookingRow{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    
+  }
+  .cancelButton {
+    background-color: #ff4d4d; /* Красный фон */
+    color: white; /* Белый текст */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Скругленные углы */
+    padding: 1vh 2vw; /* Отступы */
+    cursor: pointer; /* Указатель при наведении */
+    font-size: 0.7em; /* Размер текста */
+  }
+  
+  .cancelButton:hover {
+    background-color: #ff3333; /* Более темный красный при наведении */
+  }
+  
+  .bookingdescrip{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    letter-spacing:4%;
+    font-family: 'Lohit Bengali', -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 1.5em;
+    color: rgb(230, 230, 230);
+    gap: 5vh
+  }
+
+
+
+  @media (max-width: 991px) {
+    .container {
+      padding: 0 1vw;
+    }
+    
+    .content {
+      margin-top: 10vh;
+      gap: 3vw;
+    }
+    .sectionTitle{
+      font-size: 1.7em;
+      margin-left: 1vw;
+    }
+    
+    .profileSection {
+      max-width: 100%;
+    }
+    
+    .twoColumn {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+    
+    .bookingsColumn,
+    .userInfoColumn {
+      width: 100%;
+      margin-left: 0;
+    }
+    
+    .userInfo {
+      margin-top: 6vh;
+      font-size: 1.5em;
+    }
+    
+    .activeBookings {
+      margin-top: 7vh;
+    }
+    
+    .editButton {
+      white-space: normal;
+      width: 30vw;
+    }
+    .bookingdescrip{
+      font-size: 1.2em;
+    }
+  }
