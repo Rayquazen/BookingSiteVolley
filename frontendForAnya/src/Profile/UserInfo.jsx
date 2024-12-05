@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./UserProfile.module.css";
 
-export default function UserInfo() {
+export default function UserInfo({ setName }) {
 	const [userDetails, setUserDetails] = useState({
 		name: "",
 		instagram: "Не указано",
@@ -27,6 +27,8 @@ export default function UserInfo() {
 				}
 
 				const data = await response.json();
+
+				setName(data.name);
 
 				setUserDetails({
 					name: data.name,
