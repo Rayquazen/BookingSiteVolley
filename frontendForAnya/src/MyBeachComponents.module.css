@@ -50,11 +50,7 @@ header {
   }
 }
 
-@media (max-width: 768px) {
-  .header {
-    font-size: 20px;
-  }
-}
+
 .backpic {
   width: 100%;
   height: 100vh;
@@ -77,7 +73,7 @@ header {
 
 @media (max-width: 991px) {
   .logo {
-    display: none;
+    width: 10vw;
   }
 }
 
@@ -93,17 +89,19 @@ header {
 @media (max-width: 991px) {
   .navigation {
     justify-content: center;
-    gap: 2vh;
-    margin: 20px 0;
+    gap: 2vw;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .navigation {
-    gap: 2vh;
-    font-size: 18px;
+    gap: 1vw;
+    min-width: 100%;
   }
+  
 }
+
+
 
 .navItem {
   color: white;
@@ -117,9 +115,22 @@ header {
 
 @media (max-width: 991px) {
   .navItem {
-    font-size: 1.3em;
+    font-size: 1.5em;
     margin: 1vw;
   }
+}
+
+@media (max-width: 500px) {
+  .navItem {
+    font-size: 1.25em;
+    margin: 0.5vw;
+  }
+}
+@media (max-width: 360px) {
+  .navItem {
+    font-size: 1.15em;
+  }
+  
 }
 
 .navItem:hover{
@@ -164,14 +175,16 @@ header {
   .heroTitle {
     font-size: 8em;
     letter-spacing: 4px;
-    margin-top: 19vh;
+    margin-top: 25vh;
   }
 }
 
 @media (max-width: 480px) {
   .heroTitle {
-    font-size: 4em;
+    font-size: 7em;
+    text-align: left;
     letter-spacing: 2px;
+    margin-top:20vh;
   }
 }
 /*комплекс*/
@@ -194,14 +207,14 @@ header {
 
 @media (max-width: 480px) {
   .heroSubtitle {
-    font-size: 2em;
+    font-size: 2.7em;
+    text-align: left;
   }
 }
 /*кнопка забронить*/
 .ctaButton {
   background-color: rgba(255, 177, 0, 0.8);
-  width: 29%; /* Относительная ширина */
-  height: 10%; /* Используем относительную высоту */
+  padding: 2vh 4vw;
   position: absolute;
   color: rgba(0, 0, 0);
   left: 5%;
@@ -222,14 +235,14 @@ header {
 
 @media (max-width: 991px) {
   .ctaButton {
-    width:50%;
+    padding: 2vh 3vw;
   }
 }
 
 @media (max-width: 480px) {
   .ctaButton {
-    width: 50%;
-    font-size: 2em;
+    width:60vw;
+    font-size: 1.5em;
   }
 }
 
@@ -270,6 +283,10 @@ header {
   .address {
     font-size: 1em;
   }
+  .backpic{
+    background-image: url("../public/IMG_8406.jpg");
+    background-size: auto 100%;
+  }
 }
 @font-face {
   font-family: Oswald;
@@ -278,4 +295,8 @@ header {
 @font-face {
   font-family: 'Lohit Bengali';
   src: url("../public/Roboto/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: 'Paytone One';
+  src: url("../public/Paytone_One/PaytoneOne-Regular.ttf");
 }

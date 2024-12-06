@@ -11,6 +11,10 @@
   margin-top: 4vh;
 }
 
+.courtTypes button{
+  font-family: "Oswald", sans-serif;
+}
+
 .highlight {
   color: #ffb100;
 }
@@ -93,6 +97,7 @@
   padding: 1vh 2vw;
   color: #000;
   cursor: pointer;
+  border: none;
 }
 
 .booked{
@@ -175,14 +180,11 @@
     gap: 1vw;
   }
 
-
   .dateButton {
     width: 40px;
     height: 40px;
     font-size: 18px;
   }
-
-
 
   .courtLabel {
     font-size: 18px;
@@ -202,29 +204,85 @@
 }
 
 @media (max-width: 480px) {
+
+  .dateSelector{
+    width: 100%;
+  }
+
+  .courtTypes a{
+    font-size: 0.7em;
+  }  
+
+  .dateDisplayButton{
+    font-size: 0.95em;
+    width: 100%;
+  }
+
+  .courtTypes button{
+    font-size: 0.7em;
+  }
+
+  .bookingTable{
+    width: 100%;
+
+  }
+
+  .courtRow{
+    width: 100%;
+  }
+
   .timeRow {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .timeSlot {
-    font-size: 1.5vw;
-    padding: 1vh 2vw;
+    font-size: 1em;
+    padding: 0.5vh 4vw;
   }
 
   .courtLabel {
-    font-size: 16px;
-    width: 60px;
+    font-size: 1em;
+    margin-left: -15vw;
   }
 
-
   .dateButton {
-    width: 35px;
-    height: 35px;
-    font-size: 16px;
+    width: 10vw;
+    height: 10vw;
+    font-size: 1.5em;
   }
 
   .dateInput {
     width: 120px;
     font-size: 12px;
   }
+
+  .legend{
+    font-size: 1em;
+  }
+  .legendIcon{
+    width: 5vw;
+    height: 5vw;
+  }
+}
+@media (max-width:390px){
+  .courtLabel{
+    font-size: 0.9em;
+  }
+  .courtTypes a{
+    font-size: 0.6em;
+  }
+  .courtTypes button{
+    font-size: 0.6em;
+  }
+  .courtLabel {
+    font-size: 1em;
+    margin-left: -18vw;
+  }
+  .legendItem{
+    font-size: 0.85em;
+  }
+  .dateDisplayButton{
+    font-size: 0.71em;
+  }
+
 }

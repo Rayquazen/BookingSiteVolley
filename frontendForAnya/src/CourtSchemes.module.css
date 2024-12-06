@@ -13,6 +13,7 @@
       padding: 0 5vh;
     }
   }
+
   
   .title {
     color: #ffb100;
@@ -37,10 +38,18 @@
   @media (max-width: 991px) {
     .courtContainer {
       max-width: 100%;
-      margin-top: 40px;
+      margin-top: 2vh;
     }
   }
   
+  @media (max-width: 480px) {
+    .courtContainer {
+      width: 100%;
+      margin-top: 1vh;
+      
+    }
+  }
+
   .courtGrid {
     display: flex;
     gap: 3vw;
@@ -68,6 +77,13 @@
       width: 100%;
     }
   }
+
+  @media (max-width: 480px) {
+    .courtColumn {
+      width: 100%;
+      margin-left: -5vw;
+    }
+  }
   
   .courtWrapper {
     background-color: transparent;
@@ -93,6 +109,12 @@
   .courtTitle {
     align-self: center;
   }
+
+  @media (max-width: 480px) {
+    .courtTitle {
+      display: none;
+    }
+  }
   
   .courtImage {
     aspect-ratio: 0.78;
@@ -107,6 +129,14 @@
       width:30vw ;
     }
   }
+
+  @media (max-width: 480px) {
+    .courtImage {
+      width:80vw;
+      ;
+    }
+  }
+
   
   .description {
     color: #fff;
@@ -119,7 +149,7 @@
   @media (max-width: 991px) {
     .description {
       max-width: 100%;
-      font-size: 1em;
+      font-size: 1.2em;
     }
   }
   
