@@ -43,7 +43,16 @@
 </div>
 <div align="center">
   <img src="https://github.com/user-attachments/assets/c17e6a13-5a39-46f3-8f13-a89606f27fda" />
-  <b>Активные бронирования </b>
+  <b> Активные бронирования </b>
 </div>
 
 
+### 5. Misc
+
+#### Инструменты которые использовались
+
+![6](https://github.com/user-attachments/assets/b158620e-53e6-4e01-ba4a-c07b4f9b9ea1)
+
+#### Перспективы
+
+![7](https://github.com/user-attachments/assets/dc3406b6-7d52-4aba-b78b-603d900fa572)
